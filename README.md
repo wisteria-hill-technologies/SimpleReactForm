@@ -1,2 +1,0 @@
-# SimpleReactForm
-Created with CodeSandbox
