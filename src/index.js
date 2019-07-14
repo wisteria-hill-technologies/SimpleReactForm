@@ -12,7 +12,7 @@ const Input = ({ name, checkError, validate }) => {
     } else {
       setError("");
     }
-  }, [touched, value]);
+  }, [touched, checkError, value]);
 
   useEffect(() => {
     if (validate) {
@@ -30,7 +30,7 @@ const Input = ({ name, checkError, validate }) => {
         id={name}
         name={name}
         type="text"
-        onFocus={() => setTouched(true)}
+        onBlur={() => setTouched(true)}
         onChange={e => setValue(e.target.value)}
         value={value}
       />
